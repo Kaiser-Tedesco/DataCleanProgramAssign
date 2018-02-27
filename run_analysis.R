@@ -31,7 +31,7 @@
         activitylabels <- read.table(".\\data\\UCI HAR Dataset\\activity_labels.txt")
         features <- read.table(".\\data\\UCI HAR Dataset\\features.txt")
 
-##1. Compiling columns in x train and test then adding test to the bottom of train
+##1. Compiling Indicator variables to train and test then merging test and train
         train <- cbind(subjecttrain, ytrain, xtrain)
         test <- cbind(subjecttest, ytest, xtest)
         dat <- rbind(train, test)
